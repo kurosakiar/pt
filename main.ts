@@ -1,5 +1,29 @@
+/**
+ * Acceleration X : 
+ * 
+ * Index 0-5:
+ * 
+ * 30 + (0x30) = 30 m/s^2
+ * 
+ * 30 +(1x30) = 60 m/s^2
+ * 
+ * 30 +(2x30) = 90 m/s^2
+ * 
+ * 30 +(3x30) = 120 m/s^2
+ * 
+ * 30 +(4x30) = 150 m/s^2
+ * 
+ * 30 +(5x30) = 180 m/s^2
+ */
+/**
+ * Video cited (youtube): 
+ * 
+ * Makecode arcade beginner - group of sprite
+ */
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-	
+    if (Teki.x < 0) {
+    	
+    }
 })
 function GroupTekis () {
     for (let index = 0; index <= 5; index++) {
@@ -30,9 +54,9 @@ function GroupTekis () {
             ........................
             `, SpriteKind.Enemy)
         Teki.ax = 30 + index * 30
-        Teki.y = 30
+        Teki.y = 20
         Teki.setBounceOnWall(true)
-        Teki.setVelocity(100, 10)
+        Teki.setVelocity(100, 20)
     }
 }
 let Teki: Sprite = null
