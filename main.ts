@@ -21,8 +21,9 @@
  * Makecode arcade beginner - group of sprite
  */
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-    if (Teki.x < 0) {
-    	
+    if (sprite.y >= 110) {
+        info.changeLifeBy(-1)
+        sprites.destroy(sprite, effects.spray, 500)
     }
 })
 function GroupTekis () {
